@@ -1,0 +1,206 @@
+.accounts__container {
+  padding: 50px;
+}
+
+.accounts__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.accounts__top-left {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.accounts__top-left .choices {
+  width: 300px;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  color: var(--main-grey2-color);
+}
+
+.accounts__top-left .choices::after {
+  z-index: 10;
+}
+
+.accounts__top-left .choices__inner {
+  position: relative;
+  padding: 10px 15px;
+  border-radius: 7px;
+  border-color: var(--main-color);
+  z-index: 2;
+}
+
+.accounts__top-left .choices__list--dropdown {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 7px;
+  border: none;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.accounts__top-left .choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: var(--main-light-color);
+}
+
+#choices--store-accounts-item-choice-4 {
+  display: none;
+}
+
+.accounts__new-account-button {
+  font-size: 16px;
+  padding-left: 40px;
+  position: relative;
+}
+
+.accounts__new-account-button::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  height: 2px;
+  margin-top: -5px;
+  top: 60%;
+  left: 15px;
+  right: 181px;
+  z-index: 9;
+}
+
+.accounts__new-account-button::before {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  width: 2px;
+  /* margin-left: -9px; */
+  left: 21px;
+  top: 19px;
+  bottom: 17px;
+  z-index: 9;
+}
+
+.accounts__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.accounts__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-width: 400px;
+  padding: 22px;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+
+.accounts__item-right {
+  margin-bottom: 13px;
+}
+
+.accounts__number {
+  margin-bottom: 10px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  color: var(--main-dark-color);
+}
+
+.accounts__balance {
+  margin-bottom: 30px;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--main-dark-color);
+}
+
+.accounts__transaction-title,
+.accounts__transaction-date {
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: var(--main-black-color);
+}
+
+.accounts__transaction-date {
+  font-weight: 400;
+}
+
+.accounts__open-button {
+  font-size: 16px;
+}
+
+@media (max-width: 992px) {
+  .accounts__top-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .accounts__list {
+    gap: 35px;
+    justify-content: flex-start;
+  }
+
+  .accounts__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+    min-width: max-content;
+    width: max-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .accounts__top {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .accounts__list {
+    gap: 35px;
+    justify-content: center;
+  }
+
+  .accounts__item {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 35px;
+    min-width: 100%;
+  }
+
+
+}
+
+@media (max-width: 600px) {
+
+  .accounts__container {
+    padding: 30px 15px;
+  }
+
+  .accounts__item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .choices {
+    max-width: 100%;
+  }
+
+}
+
+
+
+
+

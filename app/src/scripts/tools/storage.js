@@ -1,0 +1,31 @@
+export function saveToSessionStorage(key, data) {
+  try {
+    window.sessionStorage.setItem(key, JSON.stringify(data));
+  } catch (err) {
+    alert('Failed to save data to local storage.');
+  }
+}
+
+export function loadFromSessionStorage(key) {
+  try {
+    return JSON.parse(window.sessionStorage.getItem(key));
+  } catch (err) {
+    alert('Failed to load data from local storage.');
+  }
+}
+
+export function saveToLocalStorage(key, data) {
+  try {
+    window.localStorage.setItem(key, JSON.stringify(data));
+  } catch (err) {
+    alert('Failed to save data to local storage.');
+  }
+}
+
+export function loadFromLocalStorage(key) {
+  try {
+    return JSON.parse(window.localStorage.getItem(key));
+  } catch (err) {
+    alert('Failed to load data from local storage.');
+  }
+}

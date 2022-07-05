@@ -1,0 +1,31 @@
+.balance-stat {
+  padding: 25px 50px;
+  height: 100%;
+  background-color: var(--main-white-color);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  transition: box-shadow, .3s ease;
+}
+
+.balance-stat {
+  margin-bottom: 30px;
+}
+
+
+.balance-stat__title {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.balance-stat__empty {
+  margin-top: 20%;
+  text-align: center;
+  font-size: 20px;
+  color: var(--main-grey5-color);
+  opacity: 0.5;
+}
+
+.balance-stat__chart {
+  position: relative;
+  height: 30vh;
+}

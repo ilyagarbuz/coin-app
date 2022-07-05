@@ -1,0 +1,15 @@
+.atm__title {
+  margin-bottom: 56px;
+}
+
+.atm__map {
+  width: 100%;
+  height: 80vh;
+  background-color: aqua;
+}
+
+@media (max-width: 600px) {
+  .atm__title {
+    margin-bottom: 30px;
+  }
+}

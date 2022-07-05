@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("../assets/fonts/Worksansbold.woff") format("truetype");
+  src: url("../assets/fonts/Worksansbold.woff2") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("../assets/fonts/Worksanssemibold.woff") format("truetype");
+  src: url("../assets/fonts/Worksanssemibold.woff2") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("../assets/fonts/Worksansmedium.woff") format("truetype");
+  src: url("../assets/fonts/Worksansmedium.woff2") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("../assets/fonts/Worksans.woff") format("truetype");
+  src: url("../assets/fonts/Worksans.woff2") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("../assets/fonts/Worksanslight.woff") format("truetype");
+  src: url("../assets/fonts/Worksanslight.woff2") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../assets/fonts/ubuntumedium.woff") format("truetype");
+  src: url("../assets/fonts/ubuntumedium.woff2") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../assets/fonts/ubuntu.woff") format("truetype");
+  src: url("../assets/fonts/ubuntu.woff2") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Robotomedium.woff") format("truetype");
+  src: url("../assets/fonts/Robotomedium.woff2") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+:root {
+  --main-color: #116ACC;
+  --main-dark-color: #182233;
+  --main-black-color: #000;
+  --main-white-color: #fff;
+  --main-grey-color: #F3F4F6;
+  --main-grey5-color: #9CA3AF;
+  --main-grey4-color: #6B7280;
+  --main-grey2-color: #374151;
+  --main-light-color: #A0C3FF;
+  --main-error-color: #EB5757;
+}
+
+body {
+  font-family: "WorkSans", sans-serif;
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 25px 50px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 34px;
+  letter-spacing: -0.02em;
+  color: var(--main-black-color);
+}
+
+.button {
+  padding: 15px 20px;
+  background: var(--main-color);
+  color: var(--main-white-color);
+  max-width: max-content;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.button:not([disabled]):hover,
+.button:not([disabled]):focus-visible {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), #116ACC;
+}
+
+.button:active {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #116ACC;
+}
+
+.button:disabled {
+  opacity: 0.2;
+}
+
+
+.error,
+.error-input {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--main-error-color);
+}
+
+.error-input {
+  display: none;
+  position: absolute;
+  bottom: -30%;
+  right: 0;
+  font-size: 12px;
+}
+
+.loader {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background-color: var(--main-grey-color);
+}
+
+.loader__spinner {
+  border: 10px solid var(--main-white-color); /* Light grey */
+  border-top: 10px solid var(--main-color); /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite;
+}
+
+.spinner-box {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 20;
+}
+
+.spinner {
+  border: 10px solid var(--main-white-color); /* Light grey */
+  border-top: 10px solid var(--main-color); /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-block {
+  position: fixed;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 2vh;
+  right: 3vh;
+  max-width: 300px;
+  background-color: rgba(186, 0, 0, 0.5);
+  border-radius: 22px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.error-message {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: var(--main-white-color);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 25px 15px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+}
+

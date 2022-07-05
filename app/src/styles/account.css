@@ -1,0 +1,221 @@
+.account__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.account__back-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+}
+
+.account__back-btn::before {
+  content: '🠔';
+  font-size: 25px;
+}
+
+.account__number {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 40px;
+}
+
+.balance {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.balance__title {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.02em
+}
+
+.balance__sum {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.account__main-blok {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+@media(max-width: 1440px) {
+  .account__main-blok {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+
+
+
+.transfer-block {
+  padding: 25px 50px;
+  background-color: var(--main-grey-color);
+  border-radius: 50px;
+}
+
+@media(max-width: 1440px) {
+  .transfer-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+
+
+.transfer-block__title {
+  font-size: 20px;
+}
+
+.transfer-block__form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.transfer-block__input-group {
+  display: flex;
+  position: relative;
+  justify-content: end;
+  align-items: center;
+  gap: 18px;
+}
+
+.transfer-block__label {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+}
+
+.transfer-block__input {
+  width: 300px;
+  padding: 10px 15px;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  color: var(--main-black-color);
+  background: #FFFFFF;
+  border: 1px solid #9CA3AF;
+  border-radius: 7px;
+  outline: none;
+}
+
+.transfer-block__input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.transfer-block__input::placeholder {
+  color: var(--main-grey4-color);
+}
+
+.transfer-block__button {
+  display: flex;
+  gap: 10px;
+  align-self: center;
+}
+
+
+.transfer-block__button::before {
+  content: '✉';
+  font-size: 23px;
+}
+
+.account__balance-stat {
+  cursor: pointer;
+}
+
+.account__balance-stat:hover .balance-stat {
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.account__balance-stat:active .balance-stat {
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.history {
+  padding: 25px 50px;
+  background-color: var(--main-grey-color);
+  border-radius: 50px;
+  max-width: 100%;
+  overflow: scroll;
+}
+
+.history__title {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 992px) {
+  .account__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .account__number {
+    font-size: 20px;
+  }
+
+  .balance__sum {
+    font-size: 16px;
+    width: 170px;
+  }
+
+  .transfer-block__input-group {
+    flex-direction: column;
+  }
+
+  .transfer-block__label,
+  .transfer-block__input {
+    width: 100%;
+  }
+
+  .balance-stat {
+    max-width: 100%;
+    overflow: auto;
+  }
+
+  .balance-stat__chart {
+    width: 782px;
+  }
+}
+
+@media (max-width: 992px) {
+  .balance-stat__title {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+

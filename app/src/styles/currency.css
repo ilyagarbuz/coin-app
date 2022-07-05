@@ -1,0 +1,249 @@
+.currency__title {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 40px;
+  margin-bottom: 55px;
+}
+
+.content-currency {
+  display: grid;
+
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  gap: 50px;
+  max-height: 100%;
+
+}
+
+.content-currency__block {
+  padding: 50px;
+  border-radius: 50px;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.currency-content__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 25px;
+}
+
+.content-currency__block.box-1 {
+
+  grid-row-start: 1;
+  grid-column-start: 1;
+
+  grid-row-end: 3;
+  grid-column-end: 3;
+
+}
+.content-currency__block.box-2 {
+
+  grid-row-start: 1;
+  grid-column-start: 3;
+
+  grid-row-end: 4;
+  grid-column-end: 5;
+  box-shadow: none;
+  background-color: #E5E5E5;
+  overflow: hidden;
+
+}
+.content-currency__block.box-3 {
+
+  grid-row-start: 3;
+  grid-column-start: 1;
+
+  grid-row-end: 4;
+  grid-column-end: 3;
+
+}
+
+.content-currency__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.content-currency__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 7px;
+}
+
+.currency-content__item-name {
+  font-family: 'WorkSans';
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.currency-content__item-value {
+  font-family: 'WorkSans';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.content-currency__item .dotts {
+  width: 100%;
+  border-bottom: 1px dashed black;
+}
+
+
+.content-currency__item .slash {
+  font-size: 20px;
+}
+
+#currency-feed-rate {
+  position: relative;
+  padding-right: 25px;
+}
+
+#currency-feed-rate.down::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 30%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #FD4E5D;
+  clear: both;
+}
+
+#currency-feed-rate.up::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 30%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #76CA66;
+  clear: both;
+}
+
+.form-currency {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.form-currency__input-group {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+
+.form-currency__input-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-currency__input {
+  width: 134px;
+  padding: 8px 16px;
+  border-radius: 7px;
+  border: 1px solid #9CA3AF;
+}
+
+.form-currency__label {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-size: 16px;
+
+}
+
+.form-currency__input-group .choices {
+  margin-bottom: 0;
+}
+
+.form-currency__input-group .choices__inner {
+  width: 134px;
+  padding: 8px 16px;
+  border-radius: 7px;
+  border: 1px solid #9CA3AF;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.form-currency__input-group .choicses__list .choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable  {
+  padding: 15px 21px;
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 14px;
+}
+
+#currency-amount {
+  outline: none;
+}
+
+.form-currency__button {
+  position: relative;
+}
+
+.form-currency__button::after {
+  content: '';
+  display: block;
+  width: 1.3em;
+  height: 1.3em;
+  position: absolute;
+  left: calc(50% - 0.75em);
+  top: calc(50% - 0.75em);
+  border: 0.15em solid transparent;
+  border-right-color: white;
+  border-radius: 50%;
+  animation: button-anim 0.7s linear infinite;
+  opacity: 0;
+}
+
+@keyframes button-anim {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form-currency__button.loading {
+  color: transparent;
+}
+
+.form-currency__button.loading::after {
+  opacity: 1;
+}
+
+.form-currency__button.done::before {
+  content: "✓";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  background-color: inherit;
+  border-radius: inherit;
+}
+
+@media (max-width: 992px) {
+  .content-currency {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+

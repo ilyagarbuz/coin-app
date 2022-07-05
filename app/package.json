@@ -1,0 +1,44 @@
+{
+  "name": "coin_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./",
+    "lint:report": "eslint ./",
+    "build": "webpack --mode=production --env prod",
+    "dev": "webpack serve --mode=development",
+    "test:cypress": "start-server-and-test start http://localhost:8080 cypress",
+    "cypress": "cypress open"
+  },
+  "author": "Ilya Garbuz",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@squoosh/lib": "^0.4.0",
+    "babel-loader": "^8.2.4",
+    "css-loader": "^6.7.1",
+    "cypress": "^9.7.0",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-formatter-gitlab": "^3.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "start-server-and-test": "^1.14.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "chart.js": "^3.7.1",
+    "choices.js": "^10.1.0",
+    "moment": "^2.29.3",
+    "redom": "^3.27.3",
+    "sort-array": "^4.1.5",
+    "ymaps": "^0.2.1"
+  }
+}
